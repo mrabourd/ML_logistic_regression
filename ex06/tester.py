@@ -7,7 +7,7 @@ Y = np.array([[1], [0], [1]])
 thetas = np.array([[2], [0.5], [7.1], [-4.3], [2.09]])
 mylr = MyLR(thetas)
 # Example 0:
-mylr.predict_(X)
+print(mylr.predict_(X))
 # Output:
 # array([[0.99930437],
 # [1.
@@ -17,31 +17,31 @@ mylr.predict_(X)
 
 
 # Example 1:
-mylr.loss_(X,Y)
+print(mylr.loss_(X,Y))
 # Output:
 # 11.513157421577002
 
 
 # Example 2:
-mylr.fit_(X, Y)
-mylr.theta
-# Output:
-# array([[ 2.11826435]
-# [ 0.10154334]
-# [ 6.43942899]
-# [-5.10817488]
-# [ 0.6212541 ]])
+print("fit ex2:", mylr.fit_(X, Y))
+print("theta:", mylr.theta)
+# # Output:
+# # array([[ 2.11826435]
+# # [ 0.10154334]
+# # [ 6.43942899]
+# # [-5.10817488]
+# # [ 0.6212541 ]])
 
 
-# Example 3:
-mylr.predict_(X)
-# Output:
-# array([[0.57606717]
-# [0.68599807]
-# [0.06562156]])
+# # Example 3:
+print("predict ex3:", mylr.predict_(X))
+# # Output:
+# # array([[0.57606717]
+# # [0.68599807]
+# # [0.06562156]])
 
 
-# Example 4:
-mylr.loss_(X,Y)
+# # Example 4:
+print("loss ex4:", mylr.loss_(X,Y))
 # Output:
 # 1.4779126923052268
